@@ -55,6 +55,15 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_31F220396AFB4FBC9B8D844D2287FDE0 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_38735323CA3E44CF9484A17AA939BC56 }}
 
+
+      - name: Configuracion cadena PostgreSQL en Azure
+        run: |
+          az webapp config appsettings set \
+            --resource-group api-inventario-shay_group-8f29 \
+            --name api-inventario-shay \
+            --settings "ConnectionStrings__postgresRemote=${{ secrets.POSTGRES_REMOTE }}"
+
+      
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
