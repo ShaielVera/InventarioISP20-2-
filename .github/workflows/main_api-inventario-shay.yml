@@ -61,7 +61,7 @@ jobs:
           az webapp config appsettings set \
             --resource-group api-inventario-shay_group-8f29 \
             --name api-inventario-shay \
-            --settings "ConnectionStrings__postgresRemote=${{ secrets.POSTGRES_REMOTE }}"
+            --settings "ConnectionStrings__postgresRemote=${{ secrets.POSTGRESREMOTE }}"
 
       
       - name: Deploy to Azure Web App
