@@ -3,6 +3,7 @@ using System;
 using Backend.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Backend.Migrations
 {
     [DbContext(typeof(InventarioContext))]
-    partial class InventarioContextModelSnapshot : ModelSnapshot
+    [Migration("20260903224254_subiendo_basededatos")]
+    partial class subiendo_basededatos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,35 +70,35 @@ namespace Backend.Migrations
                         new
                         {
                             Id = 1,
-                            Address = "N.Zamaro 2559",
-                            Created_at = new DateTimeOffset(new DateTime(2026, 9, 8, 18, 0, 45, 459, DateTimeKind.Unspecified).AddTicks(7678), new TimeSpan(0, -3, 0, 0, 0)),
-                            Dni = "44496912",
-                            Firstname = "Shaiel",
+                            Address = "Calle Falsa 123",
+                            Created_at = new DateTimeOffset(new DateTime(2026, 9, 3, 19, 42, 51, 870, DateTimeKind.Unspecified).AddTicks(9389), new TimeSpan(0, -3, 0, 0, 0)),
+                            Dni = "12345678",
+                            Firstname = "Juan",
                             IsDeleted = false,
-                            Lastname = "Vera",
-                            LocalidadId = 1
+                            Lastname = "Pérez",
+                            LocalidadId = 0
                         },
                         new
                         {
                             Id = 2,
                             Address = "Avenida Siempre Viva 456",
-                            Created_at = new DateTimeOffset(new DateTime(2026, 9, 8, 18, 0, 45, 459, DateTimeKind.Unspecified).AddTicks(7745), new TimeSpan(0, -3, 0, 0, 0)),
+                            Created_at = new DateTimeOffset(new DateTime(2026, 9, 3, 19, 42, 51, 870, DateTimeKind.Unspecified).AddTicks(9448), new TimeSpan(0, -3, 0, 0, 0)),
                             Dni = "87654321",
                             Firstname = "María",
                             IsDeleted = false,
                             Lastname = "González",
-                            LocalidadId = 2
+                            LocalidadId = 0
                         },
                         new
                         {
                             Id = 3,
                             Address = "Callejón del Beso 789",
-                            Created_at = new DateTimeOffset(new DateTime(2026, 9, 8, 18, 0, 45, 459, DateTimeKind.Unspecified).AddTicks(7749), new TimeSpan(0, -3, 0, 0, 0)),
+                            Created_at = new DateTimeOffset(new DateTime(2026, 9, 3, 19, 42, 51, 870, DateTimeKind.Unspecified).AddTicks(9452), new TimeSpan(0, -3, 0, 0, 0)),
                             Dni = "11223344",
                             Firstname = "Pedro",
                             IsDeleted = false,
                             Lastname = "López",
-                            LocalidadId = 3
+                            LocalidadId = 0
                         });
                 });
 
