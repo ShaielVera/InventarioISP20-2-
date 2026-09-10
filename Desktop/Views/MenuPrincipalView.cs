@@ -51,5 +51,11 @@ namespace Desktop
             ProbandoIA_Gemini probandoIA_Gemini = new();
             probandoIA_Gemini.ShowDialog();
         }
+
+        private void SubMenuClientesApi_Click(object sender, EventArgs e)
+        {
+            ClientesApiView clientesApiView = new();
+            clientesApiView.ShowDialog();
+        }
     }
 }
