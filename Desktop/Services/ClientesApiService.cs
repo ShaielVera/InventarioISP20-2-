@@ -74,54 +74,48 @@ namespace Desktop.Services
 
         public async Task<bool> AddClienteAsync(Cliente cliente)
         {
-            //try
-            //{
-            //    // Configuramos las opciones de serialización para ignorar propiedades nulas y hacer que la búsqueda de propiedades sea insensible a mayúsculas
+            try
+            {
+                // Configuramos las opciones de serialización para ignorar propiedades nulas y hacer que la búsqueda de propiedades sea insensible a mayúsculas
 
 
-            //    var json = JsonSerializer.Serialize(cliente,options);
-            //    var content = new StringContent(json, Encoding.UTF8, "application/json");
-            //    var response = await httpClient.PostAsync("", content);
-            //    if (response.IsSuccessStatusCode)
-            //    {
-            //        return true;
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Error al crear el cliente: " + response.ReasonPhrase);
-            //        return false;
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error al crear el cliente desde la Api: " + ex.Message);
-            //    return false;
-            //}
-            return false;
+                var json = JsonSerializer.Serialize(cliente, options);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await httpClient.PostAsync("", content);
+                if (!response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Error al crear el cliente: " + response.ReasonPhrase);
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al crear el cliente desde la Api: " + ex.Message);
+                return false;
+            }
         }
 
         public async Task<bool> DeleteClienteAsync(int id)
         {
-            //try
-            //{
-            //    string urlSelectedId = $"?id=eq.{id}";
-            //    var response = await httpClient.DeleteAsync(urlSelectedId);
-            //    if (response.IsSuccessStatusCode)
-            //    {
-            //        return true;
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Error al eliminar el cliente: " + response.ReasonPhrase);
-            //        return false;
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error al eliminar el cliente desde la Api: " + ex.Message);
-            //    return false;
-            //}
-            return false;
+            try
+            {
+                var response = await httpClient.DeleteAsync(id.ToString());
+                if (response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Error al eliminar el cliente: " + response.ReasonPhrase);
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el cliente desde la Api: " + ex.Message);
+                return false;
+            }
         }
 
         public async Task<List<Cliente>?> GetDeletedsAsync()
@@ -174,35 +168,31 @@ namespace Desktop.Services
 
         public async Task<bool> UpdateClienteAsync(Cliente cliente)
         {
-            //try
-            //{
-            //    // Configuramos las opciones de serialización para ignorar propiedades nulas y hacer que la búsqueda de propiedades sea insensible a mayúsculas
-            //    var options = new JsonSerializerOptions
-            //    {
-            //        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
-            //        PropertyNameCaseInsensitive = true,
-            //    };
+            try
+            {
+                // Configuramos las opciones de serialización para ignorar propiedades nulas y hacer que la búsqueda de propiedades sea insensible a mayúsculas
+                var options = new JsonSerializerOptions
+                {
+                    DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+                    PropertyNameCaseInsensitive = true,
+                };
 
-            //    var json = JsonSerializer.Serialize(cliente, options);
-            //    var content = new StringContent(json, Encoding.UTF8, "application/json");
-            //    string urlSelectedId = $"?id=eq.{cliente.id}";
-            //    var response = await httpClient.PutAsync(urlSelectedId, content);
-            //    if (response.IsSuccessStatusCode)
-            //    {
-            //        return true;
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Error al actualizar el cliente: " + response.ReasonPhrase);
-            //        return false;
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error al actualizar el cliente desde la Api: " + ex.Message);
-            //    return false;
-            //}
-            return false;
+                var json = JsonSerializer.Serialize(cliente, options);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                string idcliente = cliente.Id.ToString();
+                var response = await httpClient.PutAsync(idcliente, content);
+                if (!response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Error al actualizar el cliente: " + response.ReasonPhrase);
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar el cliente desde la Api: " + ex.Message);
+                return false;
+            }
         }
 
         private HttpClient SettingHttpClient()
