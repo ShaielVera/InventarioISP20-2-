@@ -41,6 +41,8 @@
             label2 = new Label();
             dataGridClientes = new DataGridView();
             tabPageAgregarEditar = new TabPage();
+            label7 = new Label();
+            comboLocalidades = new ComboBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -215,6 +217,8 @@
             // 
             // tabPageAgregarEditar
             // 
+            tabPageAgregarEditar.Controls.Add(label7);
+            tabPageAgregarEditar.Controls.Add(comboLocalidades);
             tabPageAgregarEditar.Controls.Add(label6);
             tabPageAgregarEditar.Controls.Add(label5);
             tabPageAgregarEditar.Controls.Add(label4);
@@ -234,10 +238,28 @@
             tabPageAgregarEditar.Text = "Agregar/Editar";
             tabPageAgregarEditar.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(41, 214);
+            label7.Margin = new Padding(2, 0, 2, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(61, 15);
+            label7.TabIndex = 15;
+            label7.Text = "Localidad:";
+            // 
+            // comboLocalidades
+            // 
+            comboLocalidades.FormattingEnabled = true;
+            comboLocalidades.Location = new Point(146, 211);
+            comboLocalidades.Name = "comboLocalidades";
+            comboLocalidades.Size = new Size(334, 23);
+            comboLocalidades.TabIndex = 14;
+            // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(47, 194);
+            label6.Location = new Point(47, 175);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
             label6.Size = new Size(60, 15);
@@ -247,7 +269,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(71, 149);
+            label5.Location = new Point(71, 130);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(30, 15);
@@ -257,7 +279,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(47, 101);
+            label4.Location = new Point(47, 82);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
             label4.Size = new Size(54, 15);
@@ -267,7 +289,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(47, 56);
+            label3.Location = new Point(47, 37);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(54, 15);
@@ -276,7 +298,7 @@
             // 
             // txtDireccion
             // 
-            txtDireccion.Location = new Point(146, 194);
+            txtDireccion.Location = new Point(146, 175);
             txtDireccion.Margin = new Padding(2);
             txtDireccion.Name = "txtDireccion";
             txtDireccion.Size = new Size(334, 23);
@@ -284,7 +306,7 @@
             // 
             // txtDni
             // 
-            txtDni.Location = new Point(146, 145);
+            txtDni.Location = new Point(146, 126);
             txtDni.Margin = new Padding(2);
             txtDni.Name = "txtDni";
             txtDni.Size = new Size(334, 23);
@@ -292,7 +314,7 @@
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(146, 98);
+            txtApellido.Location = new Point(146, 79);
             txtApellido.Margin = new Padding(2);
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(334, 23);
@@ -300,7 +322,7 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(146, 53);
+            txtNombre.Location = new Point(146, 34);
             txtNombre.Margin = new Padding(2);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(334, 23);
@@ -380,5 +402,7 @@
         private FontAwesome.Sharp.IconButton btnEliminar;
         private CheckBox checkEliminado;
         private FontAwesome.Sharp.IconButton btnRestaurar;
+        private Label label7;
+        private ComboBox comboLocalidades;
     }
 }

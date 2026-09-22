@@ -31,6 +31,36 @@ namespace Backend.Controllers
                             .ToListAsync();
         }
 
+        [HttpGet("deleteds")]
+        public async Task<ActionResult<IEnumerable<Localidad>>> GetDeleteds()
+        {
+            return await _context.Localidades
+                .IgnoreQueryFilters()
+                .Include(l => l.Provincia)
+                .ThenInclude(p => p.Pais)
+                .Where(c => c.IsDeleted)
+                .ToListAsync();
+        }
+
+        [HttpPut("restore/{id}")]
+        public async Task<IActionResult> RestoreLocalidad(int id)
+        {
+            var localidad = await _context.Localidades
+                .IgnoreQueryFilters()
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (localidad == null)
+            {
+                return NotFound();
+            }
+
+            localidad.IsDeleted = false;
+            _context.Entry(localidad).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
         // GET: api/Localidades/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Localidad>> GetLocalidad(int id)
@@ -111,7 +141,7 @@ namespace Backend.Controllers
             return _context.Localidades.Any(e => e.Id == id);
         }
 
-                // devolvemos el total de localidades que no estan eliminadas
+        // devolvemos el total de localidades que no estan eliminadas
         [HttpGet("total")]
         public async Task<ActionResult<int>> GetTotalLocalidades()
         {
