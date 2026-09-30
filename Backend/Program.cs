@@ -2,7 +2,7 @@ using Backend.Data;
 using Microsoft.EntityFrameworkCore;
 internal class Program
 {
-    private static void Main(string[] args)
+    public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +19,7 @@ internal class Program
             .Build();
 
         //string cadenaConexion = configuration.GetConnectionString("mysqlRemote");
-        var cadenaConexion = configuration.GetConnectionString("postgresRemote");
+        var cadenaConexion = configuration.GetConnectionString("postgresLocal");
 
         
         builder.Services.AddDbContext<InventarioContext>(

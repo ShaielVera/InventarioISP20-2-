@@ -57,5 +57,11 @@ namespace Desktop
             ClientesApiView clientesApiView = new();
             clientesApiView.ShowDialog();
         }
+
+        private void SubMenuLocalidadesApi_Click(object sender, EventArgs e)
+        {
+            LocalidadesApiView localidadesApiView = new();
+            localidadesApiView.ShowDialog();
+        }
     }
 }
