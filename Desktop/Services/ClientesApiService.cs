@@ -199,7 +199,7 @@ namespace Desktop.Services
         {
             Env.Load("../../../");
             //var urlApi = Environment.GetEnvironmentVariable("URLAPI");
-            var urlApiLocal = Environment.GetEnvironmentVariable("URLAPILOCAL");
+            var urlApiLocal = Environment.GetEnvironmentVariable("URLAPI");
             //instanciamos el httpClient y lo configuramos para poder utilizarlo en cada uno de los métodos
             var httpClient = new HttpClient();
             httpClient.BaseAddress = new Uri(urlApiLocal+"Clientes/");

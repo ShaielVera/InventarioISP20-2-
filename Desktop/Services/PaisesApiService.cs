@@ -183,7 +183,7 @@ namespace Desktop.Service
         {
             Env.Load("../../../"); //cargando las variables de entorno del archivo .env
             //var urlApi = Environment.GetEnvironmentVariable("URLAPI");
-            var urlApi = Environment.GetEnvironmentVariable("URLAPILOCAL");
+            var urlApi = Environment.GetEnvironmentVariable("URLAPI");
             var httpClient = new HttpClient();
             httpClient.BaseAddress = new Uri(urlApi + "Paises/");
             httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
