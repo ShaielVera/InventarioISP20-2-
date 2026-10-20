@@ -10,12 +10,18 @@
 
   <ItemGroup>
     <None Remove=".env" />
+    <None Remove="Reports\Clientes.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\Clientes.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DotNetEnv" Version="3.2.0" />
     <PackageReference Include="FirebaseAuthentication.net" Version="4.1.0" />
     <PackageReference Include="FontAwesome.Sharp" Version="6.6.0" />
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.33" />
     <PackageReference Include="Supabase" Version="1.1.1" />
   </ItemGroup>
 
@@ -34,6 +40,9 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ViewReports\LocalidadesViewReport.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\ClientesSupabaseView.cs">
       <SubType>Form</SubType>

@@ -11,29 +11,29 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>3.20238cm</Height>
+              <Height>1.34083cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
                     <Rectangle Name="Rectangle1">
                       <ReportItems>
-                        <Textbox Name="lastname">
+                        <Textbox Name="Lastname1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!lastname.Value</Value>
+                                  <Value>=Fields!Lastname.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>lastname</rd:DefaultName>
-                          <Top>0.40252cm</Top>
-                          <Left>0.44979cm</Left>
+                          <rd:DefaultName>Lastname1</rd:DefaultName>
+                          <Top>0.3175cm</Top>
+                          <Left>0.44978cm</Left>
                           <Height>0.6cm</Height>
                           <Width>2.5cm</Width>
                           <Style>
@@ -46,23 +46,23 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <Textbox Name="firstname">
+                        <Textbox Name="Firstname">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!firstname.Value</Value>
+                                  <Value>=Fields!Firstname.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>firstname</rd:DefaultName>
-                          <Top>0.40252cm</Top>
-                          <Left>3.75708cm</Left>
+                          <rd:DefaultName>Firstname</rd:DefaultName>
+                          <Top>0.3175cm</Top>
+                          <Left>3.75707cm</Left>
                           <Height>0.6cm</Height>
                           <Width>2.5cm</Width>
                           <ZIndex>1</ZIndex>
@@ -76,22 +76,22 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <Textbox Name="dni">
+                        <Textbox Name="Dni">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!dni.Value</Value>
+                                  <Value>=Fields!Dni.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>dni</rd:DefaultName>
-                          <Top>0.40252cm</Top>
+                          <rd:DefaultName>Dni</rd:DefaultName>
+                          <Top>0.3175cm</Top>
                           <Left>7.01146cm</Left>
                           <Height>0.6cm</Height>
                           <Width>2.5cm</Width>
@@ -106,23 +106,23 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <Textbox Name="address">
+                        <Textbox Name="Address">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!address.Value</Value>
+                                  <Value>=Fields!Address.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>address</rd:DefaultName>
-                          <Top>0.40252cm</Top>
-                          <Left>11.21834cm</Left>
+                          <rd:DefaultName>Address</rd:DefaultName>
+                          <Top>0.3175cm</Top>
+                          <Left>11.21833cm</Left>
                           <Height>0.6cm</Height>
                           <Width>2.5cm</Width>
                           <ZIndex>3</ZIndex>
@@ -163,9 +163,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DSClientes</DataSetName>
-        <Top>0.17639cm</Top>
+        <Top>0.36542cm</Top>
         <Left>0.28787cm</Left>
-        <Height>3.20238cm</Height>
+        <Height>1.34083cm</Height>
         <Width>15.835cm</Width>
         <Style>
           <Border>
@@ -174,27 +174,16 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.39967in</Height>
+    <Height>0.81634in</Height>
     <Style />
   </Body>
   <Width>6.5in</Width>
   <Page>
     <PageHeader>
-      <Height>2.54cm</Height>
+      <Height>3.00144cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Line Name="Line1">
-          <Top>2.19287cm</Top>
-          <Left>0cm</Left>
-          <Height>0cm</Height>
-          <Width>16.51cm</Width>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
         <Textbox Name="Textbox1">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -206,15 +195,16 @@
                   <Style />
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.26141cm</Top>
-          <Left>0.15557cm</Left>
+          <Left>6.79661cm</Left>
           <Height>0.6cm</Height>
-          <Width>3.18792cm</Width>
-          <ZIndex>1</ZIndex>
+          <Width>2.73813cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -229,7 +219,7 @@
           <Top>1.3112cm</Top>
           <Height>0cm</Height>
           <Width>16.51cm</Width>
-          <ZIndex>2</ZIndex>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>Solid</Style>
@@ -253,9 +243,9 @@
           <rd:DefaultName>Textbox8</rd:DefaultName>
           <Top>1.45231cm</Top>
           <Left>0.73766cm</Left>
-          <Height>0.67cm</Height>
+          <Height>0.63472cm</Height>
           <Width>3.18792cm</Width>
-          <ZIndex>3</ZIndex>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -285,7 +275,7 @@
           <Left>7.29933cm</Left>
           <Height>0.67cm</Height>
           <Width>3.18792cm</Width>
-          <ZIndex>4</ZIndex>
+          <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -315,6 +305,36 @@
           <Left>11.5062cm</Left>
           <Height>0.67cm</Height>
           <Width>3.18792cm</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="PageNumber1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Today()</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>PageNumber1</rd:DefaultName>
+          <Top>0.55245cm</Top>
+          <Left>13.30537cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
           <ZIndex>5</ZIndex>
           <Style>
             <Border>
@@ -326,6 +346,17 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Line Name="Line4">
+          <Top>2.36644cm</Top>
+          <Height>0cm</Height>
+          <Width>16.51cm</Width>
+          <ZIndex>6</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -411,20 +442,20 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="firstname">
-          <DataField>firstname</DataField>
+        <Field Name="Firstname">
+          <DataField>Firstname</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="lastname">
-          <DataField>lastname</DataField>
+        <Field Name="Lastname">
+          <DataField>Lastname</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="dni">
-          <DataField>dni</DataField>
+        <Field Name="Dni">
+          <DataField>Dni</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="address">
-          <DataField>address</DataField>
+        <Field Name="Address">
+          <DataField>Address</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

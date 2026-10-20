@@ -56,7 +56,7 @@
             // timer
             // 
             timer.Enabled = true;
-            timer.Interval = 3000;
+            timer.Interval = 1000;
             timer.Tick += timer_Tick;
             // 
             // SplashView
@@ -71,6 +71,7 @@
             Name = "SplashView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SplashView";
+            Activated += SplashView_Activated;
             Load += SplashView_Load;
             ResumeLayout(false);
             PerformLayout();

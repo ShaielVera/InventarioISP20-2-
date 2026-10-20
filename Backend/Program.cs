@@ -20,6 +20,7 @@ internal class Program
 
         //string cadenaConexion = configuration.GetConnectionString("mysqlRemote");
         var cadenaConexion = configuration.GetConnectionString("postgresRemote");
+        //var cadenaConexion = configuration.GetConnectionString("postgresLocal");
 
         
         builder.Services.AddDbContext<InventarioContext>(
