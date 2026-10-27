@@ -57,6 +57,27 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_31F220396AFB4FBC9B8D844D2287FDE0 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_38735323CA3E44CF9484A17AA939BC56 }}
 
+      - name: Configurar runtime .NET 10 en Azure App Service
+        run: |
+          KIND=$(az webapp show \
+            --resource-group api-inventario-shay_group-8f29 \
+            --name api-inventario-shay \
+            --query kind -o tsv)
+
+          if echo "$KIND" | grep -qi linux; then
+            echo "App Service Linux detectado: configurando DOTNETCORE|10.0"
+            az webapp config set \
+              --resource-group api-inventario-shay_group-8f29 \
+              --name api-inventario-shay \
+              --linux-fx-version "DOTNETCORE|10.0"
+          else
+            echo "App Service Windows detectado: configurando .NET v10.0"
+            az webapp config set \
+              --resource-group api-inventario-shay_group-8f29 \
+              --name api-inventario-shay \
+              --net-framework-version v10.0
+          fi
+
 
       - name: Configuracion cadena PostgreSQL en Azure
         run: |
