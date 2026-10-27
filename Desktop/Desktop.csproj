@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net10.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -11,10 +11,12 @@
   <ItemGroup>
     <None Remove=".env" />
     <None Remove="Reports\Clientes.rdlc" />
+    <None Remove="Reports\Localidades.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Reports\Clientes.rdlc" />
+    <EmbeddedResource Include="Reports\Localidades.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
