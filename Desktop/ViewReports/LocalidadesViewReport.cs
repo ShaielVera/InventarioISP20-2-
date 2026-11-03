@@ -31,7 +31,15 @@ namespace Desktop.ViewReports
 
             var localidades = await _localidadesService.GetAllAsync();
 
-            _report.LocalReport.DataSources.Add(new ReportDataSource("DSLocalidades", localidades));
+            // recorrer la lista de localidades y mostrar el nombre de la provincia
+            var listaLocalidades = localidades?.Select(l => new
+            {
+                l.Id,
+                l.Name,
+                Provincia = l.Provincia?.Name
+            }).ToList();
+
+            _report.LocalReport.DataSources.Add(new ReportDataSource("DSLocalidades", listaLocalidades));
             _report.SetDisplayMode(DisplayMode.PrintLayout);
             _report.ZoomMode = ZoomMode.Percent;
             _report.ZoomPercent = 100;

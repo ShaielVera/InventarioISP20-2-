@@ -62,7 +62,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Firstname</rd:DefaultName>
                           <Top>0.3175cm</Top>
-                          <Left>3.75707cm</Left>
+                          <Left>3.12207cm</Left>
                           <Height>0.6cm</Height>
                           <Width>2.5cm</Width>
                           <ZIndex>1</ZIndex>
@@ -92,7 +92,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Dni</rd:DefaultName>
                           <Top>0.3175cm</Top>
-                          <Left>7.01146cm</Left>
+                          <Left>6.05896cm</Left>
                           <Height>0.6cm</Height>
                           <Width>2.5cm</Width>
                           <ZIndex>2</ZIndex>
@@ -122,10 +122,40 @@
                           </Paragraphs>
                           <rd:DefaultName>Address</rd:DefaultName>
                           <Top>0.3175cm</Top>
-                          <Left>11.21833cm</Left>
+                          <Left>10.26583cm</Left>
                           <Height>0.6cm</Height>
                           <Width>2.5cm</Width>
                           <ZIndex>3</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Address2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Localidad.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Address</rd:DefaultName>
+                          <Top>0.37041cm</Top>
+                          <Left>13.335cm</Left>
+                          <Height>0.6cm</Height>
+                          <Width>2.5cm</Width>
+                          <ZIndex>4</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -177,7 +207,7 @@
     <Height>0.81634in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>6.51042in</Width>
   <Page>
     <PageHeader>
       <Height>3.00144cm</Height>
@@ -271,8 +301,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox8</rd:DefaultName>
-          <Top>1.41703cm</Top>
-          <Left>7.29933cm</Left>
+          <Top>1.48759cm</Top>
+          <Left>6.34682cm</Left>
           <Height>0.67cm</Height>
           <Width>3.18792cm</Width>
           <ZIndex>3</ZIndex>
@@ -301,10 +331,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox8</rd:DefaultName>
-          <Top>1.41703cm</Top>
-          <Left>11.5062cm</Left>
+          <Top>1.45231cm</Top>
+          <Left>10.5537cm</Left>
           <Height>0.67cm</Height>
-          <Width>3.18792cm</Width>
+          <Width>2.5cm</Width>
           <ZIndex>4</ZIndex>
           <Style>
             <Border>
@@ -357,6 +387,36 @@
             </Border>
           </Style>
         </Line>
+        <Textbox Name="Textbox11">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Localidad</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox8</rd:DefaultName>
+          <Top>1.48759cm</Top>
+          <Left>13.62287cm</Left>
+          <Height>0.67cm</Height>
+          <Width>2.5cm</Width>
+          <ZIndex>7</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
       </ReportItems>
       <Style>
         <Border>
@@ -456,6 +516,14 @@
         </Field>
         <Field Name="Address">
           <DataField>Address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Id">
+          <DataField>Id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Localidad">
+          <DataField>Localidad</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

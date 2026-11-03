@@ -19,13 +19,17 @@
               <xs:element name="Lastname" msprop:Generator_ColumnPropNameInTable="LastnameColumn" msprop:Generator_ColumnPropNameInRow="Lastname" msprop:Generator_UserColumnName="Lastname" msprop:Generator_ColumnVarNameInTable="columnLastname" type="xs:string" minOccurs="0" />
               <xs:element name="Dni" msprop:Generator_ColumnPropNameInTable="DniColumn" msprop:Generator_ColumnPropNameInRow="Dni" msprop:Generator_UserColumnName="Dni" msprop:Generator_ColumnVarNameInTable="columnDni" type="xs:string" minOccurs="0" />
               <xs:element name="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_UserColumnName="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="Localidad" msprop:Generator_ColumnPropNameInRow="Localidad" msprop:Generator_ColumnPropNameInTable="LocalidadColumn" msprop:Generator_ColumnVarNameInTable="columnLocalidad" msprop:Generator_UserColumnName="Localidad" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Localidades" msprop:Generator_RowEvHandlerName="LocalidadesRowChangeEventHandler" msprop:Generator_RowDeletedName="LocalidadesRowDeleted" msprop:Generator_RowDeletingName="LocalidadesRowDeleting" msprop:Generator_RowEvArgName="LocalidadesRowChangeEvent" msprop:Generator_TablePropName="Localidades" msprop:Generator_RowChangedName="LocalidadesRowChanged" msprop:Generator_RowChangingName="LocalidadesRowChanging" msprop:Generator_TableClassName="LocalidadesDataTable" msprop:Generator_RowClassName="LocalidadesRow" msprop:Generator_TableVarName="tableLocalidades" msprop:Generator_UserTableName="Localidades">
+        <xs:element name="Localidades" msprop:Generator_RowClassName="LocalidadesRow" msprop:Generator_RowEvHandlerName="LocalidadesRowChangeEventHandler" msprop:Generator_RowDeletedName="LocalidadesRowDeleted" msprop:Generator_RowDeletingName="LocalidadesRowDeleting" msprop:Generator_RowEvArgName="LocalidadesRowChangeEvent" msprop:Generator_TablePropName="Localidades" msprop:Generator_RowChangedName="LocalidadesRowChanged" msprop:Generator_UserTableName="Localidades" msprop:Generator_RowChangingName="LocalidadesRowChanging" msprop:Generator_TableClassName="LocalidadesDataTable" msprop:Generator_TableVarName="tableLocalidades">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" type="xs:string" minOccurs="0" />
+              <xs:element name="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="Provincia" msprop:Generator_ColumnPropNameInRow="Provincia" msprop:Generator_ColumnPropNameInTable="ProvinciaColumn" msprop:Generator_ColumnVarNameInTable="columnProvincia" msprop:Generator_UserColumnName="Provincia" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
